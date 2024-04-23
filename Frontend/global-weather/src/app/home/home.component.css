@@ -1,0 +1,87 @@
+/* styles.css */
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the header */
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Basic styling for the navigation */
+nav {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Styling for main content */
+main {
+    padding: 20px;
+}
+
+/* Styling for sections */
+section {
+    
+    float:left;
+    margin: 15px;
+
+}
+/* Styling for current weather section */
+.current-weather {
+    background-color: #f1c40f;
+    padding: 15px;
+    border-radius: 15px;
+    height: 60vh;
+    width: 60vh;
+}
+
+/* Styling for forecast section */
+.forecast {
+    background-color: #2ecc71;
+    padding: 15px;
+    border-radius: 15px;
+    width: 60%;
+    height: 60%;
+    
+    
+}
+
+/* Basic styling for footer */
+footer {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    float:down;
+}
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
