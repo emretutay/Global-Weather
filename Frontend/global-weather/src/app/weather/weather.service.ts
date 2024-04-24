@@ -5,17 +5,19 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class WeatherService{
-    weather_api:string = "http://localhost:8080/get_weather"
-    forecast_api:string = "http://localhost:8080/get_forecast"
+    weather_api:string = "http://localhost:8080/get_weather/"
+    forecast_api:string = "http://localhost:8080/get_forecast/"
     
     
     constructor(private http: HttpClient){}
-    getWeather():Observable<WeatherResponse>{
-        return this.http.get<WeatherResponse>(this.weather_api);
+    getWeather(name:string):Observable<WeatherResponse>{
+        var api = this.weather_api.concat(name);
+        return this.http.get<WeatherResponse>(api);
 
     }
-    getForecast():Observable<ForecastResponse>{
-        return this.http.get<ForecastResponse>(this.forecast_api);
+    getForecast(name:string):Observable<ForecastResponse>{
+        var api = this.forecast_api.concat(name);
+        return this.http.get<ForecastResponse>(api);
 
     }
 }

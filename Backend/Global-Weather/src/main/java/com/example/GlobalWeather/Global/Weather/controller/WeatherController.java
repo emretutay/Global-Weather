@@ -4,6 +4,7 @@ import com.example.GlobalWeather.Global.Weather.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -15,20 +16,20 @@ public class WeatherController {
     WeatherService weatherService;
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/get_weather")
-    public Mono<?> getWeather() {
+    @GetMapping("/get_weather/{name}")
+    public Mono<?> getWeather(@PathVariable String name) {
         try {
-            return weatherService.getWeatherByName("london");
+            return weatherService.getWeatherByName(name);
         }catch (Exception e){
             e.printStackTrace();
             return null;
         }
     }
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/get_forecast")
-    public Mono<?> getForecast() {
+    @GetMapping("/get_forecast/{name}")
+    public Mono<?> getForecast(@PathVariable String name) {
         try {
-            return weatherService.getForecastByName("london");
+            return weatherService.getForecastByName(name);
         }catch (Exception e){
             e.printStackTrace();
             return null;

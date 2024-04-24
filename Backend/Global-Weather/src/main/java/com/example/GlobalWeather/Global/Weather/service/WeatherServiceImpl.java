@@ -22,7 +22,7 @@ public class WeatherServiceImpl implements WeatherService{
     @Override
     public Mono<WeatherResponse> getWeatherByName(String name) {
          return webClient.get()
-                .uri("http://api.weatherapi.com/v1/current.json?key=2eca6817f33741bdbd4150815242204&q=London&aqi=yes")
+                .uri("http://api.weatherapi.com/v1/current.json?key=2eca6817f33741bdbd4150815242204&q="+name+"&aqi=yes")
                 .retrieve()
                 .bodyToMono(WeatherResponse.class)
                  .doOnError(throwable -> logger.error("Failed for some reason", throwable));
@@ -33,7 +33,7 @@ public class WeatherServiceImpl implements WeatherService{
     @Override
     public Mono<ForecastResponse> getForecastByName(String name) {
         return webClient.get()
-                .uri("http://api.weatherapi.com/v1/forecast.json?key=2eca6817f33741bdbd4150815242204&q=London&days=7&aqi=yes&alerts=yes")
+                .uri("http://api.weatherapi.com/v1/forecast.json?key=2eca6817f33741bdbd4150815242204&q="+name+"&days=7&aqi=yes&alerts=yes")
                 .retrieve()
                 .bodyToMono(ForecastResponse.class)
                 .doOnError(throwable -> logger.error("Failed for some reason", throwable));
