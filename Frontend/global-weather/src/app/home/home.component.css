@@ -44,28 +44,87 @@ main {
 /* Styling for sections */
 section {
     
-    float:left;
+    float:center;
     margin: 15px;
 
 }
+
 /* Styling for current weather section */
 .current-weather {
-    background-color: #f1c40f;
+    background-color: #fff;
     padding: 15px;
-    border-radius: 15px;
-    height: 60vh;
-    width: 60vh;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+    height: 40vh;
+    width: 70vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.current-weather-box{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+
+}
+.current-weather-left{
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+}
+.current-weather-right{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+
 }
 
 /* Styling for forecast section */
 .forecast {
-    background-color: #2ecc71;
+    background-color: #fff;
     padding: 15px;
-    border-radius: 15px;
-    width: 60%;
-    height: 60%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+    width: 80vh;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+
     
     
+    
+}
+.forecast-days{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.forecast-info{
+    width: 100px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-top: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+    font-weight: 500;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+    font-size: 15px;
 }
 
 /* Basic styling for footer */
@@ -84,4 +143,32 @@ footer {
     border: none;
     outline: none;
     box-shadow: none;
+}
+body{
+    background-color: rgb(236, 241, 245);
+    background-size:cover;
+    min-height: 100vh;
+}
+
+.air-quality{
+    background-color: #fff;
+    padding: 15px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+    width: 30vh;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.air-quality-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+
 }
