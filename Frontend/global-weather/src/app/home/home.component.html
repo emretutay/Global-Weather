@@ -7,99 +7,25 @@
     <title>Weather Forecast</title>
     
 </head>
+
+	    
 <body>
-    
-   
-    <main>
-    
-        <section class="current-weather">
-            <h2>Current Weather</h2>
-            <div class="current-weather-box">
-                <div class="current-weather-left">
-                    <p><strong> {{weather.location.name}}</strong></p>
-                    <img [src]="weather.current.condition.icon" alt="Weather Icon">
-                    <p> {{weather.current.temp_c}} °C</p>
-                    <p> {{weather.current.condition.text}}</p>
-                </div>
-                <div class="current-weather-right">
-                    <p><strong>Humidity:</strong> %{{weather.current.humidity}}</p>
-                    <p><strong>Feels Like:</strong> {{weather.current.feelslike_c}} °C</p>
-                    <p><strong>Cloud Cover:</strong> %{{weather.current.cloud}}</p>
-                    <p><strong>Wind Speed:</strong> {{weather.current.wind_kph}} Km/h</p>
-                </div>
-               
-            </div>
-            <p>Last update: {{weather.current.last_updated}} local time </p>
-            
-        </section>
-         <section class="air-quality">
-            <h2>Air Quality</h2>
-            <div class ="air-quality-box">
-                <p><strong>EPA Index: </strong> {{weather.current.air_quality['us-epa-index']}}</p>
-                <div *ngIf="weather.current.air_quality['us-epa-index'] === 1">
-                    Air quality is good.
-                </div>
-                <div *ngIf="weather.current.air_quality['us-epa-index'] === 2">
-                    Air quality is moderate.
-                </div>
-                <div *ngIf="weather.current.air_quality['us-epa-index'] === 3">
-                    Air quality is unhealthy for sensitive groups.
-                </div>
-                <div *ngIf="weather.current.air_quality['us-epa-index'] === 4">
-                    Air quality is unhealthy.
-                </div>
-                <div *ngIf="weather.current.air_quality['us-epa-index'] === 5">
-                    Air quality is very unhealthy.
-                </div>
-                <div *ngIf="weather.current.air_quality['us-epa-index'] === 6">
-                    Air quality is hazardous.
-                </div>
-            </div>
-        </section>
-        <section class="forecast">
-                <h2>7-Day Forecast</h2>
-                <br>
-                <div class = "forecast-days">
-                    <div class="forecast-info" *ngFor="let forecastday of forecastdays">
-                        
-                        <h5> {{ forecastday.date }}</h5>
-                        <img [src]="forecastday.day.condition.icon" alt="Weather Icon">
-                        <p> {{ forecastday.day.maxtemp_c }}/{{ forecastday.day.mintemp_c }}°C</p>
-                        
-                    </div>
-                </div>
-        </section>
-        
-        
 
-            
+            <div class="title">
+                <p><strong>Global Weather</strong></p>
+            </div>
+            <form #textForm="ngForm" class="search-box"(ngSubmit)="onSubmit(textForm.value)">
+                <div class="search" >
+                    
+                    <input type="text" id="text" class="search-input" name="text" [(ngModel)]="text" placeholder="Search location"required>
+                </div>
+                <button type="submit" class="submit" [disabled]="!textForm.form.valid">Submit</button>
+            </form>             
        
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
-    
-	    <div class="row justify-content-end">
-            <div class="col-4 col-md-4 col-lg-4">
-                <form [formGroup] = "formdata" class="card card-sm" (ngSubmit)="onSubmit(formdata.value)">
-                    <div class="card-body row no-gutters align-items-end">
-                        <div class="col-auto">
-                            <i class="fas fa-search h4 text-body"></i>
-                        </div>
-                                    
-                        <div class="col" >
-                            <input name ="search" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords" formControlName = "search">
-                        </div>
-                                    
-                        <div class="col-auto">
-                            <button class="btn btn-lg btn-success" type="submit">Search</button>
-                        </div>
-                                    
-                    </div>
-                </form>
-            </div>
                         
-        </div>
+        
  
         
-    </main>
+    
     
 </body>
