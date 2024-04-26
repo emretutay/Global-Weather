@@ -2,9 +2,12 @@ import { HttpClient } from "@angular/common/http";
 import { WeatherResponse,ForecastResponse } from "./weather.model";
 import { Observable } from 'rxjs/internal/Observable';
 import { Injectable } from "@angular/core";
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class WeatherService{
+    
+
     weather_api:string = "http://localhost:8080/get_weather/"
     forecast_api:string = "http://localhost:8080/get_forecast/"
     
@@ -20,4 +23,5 @@ export class WeatherService{
         return this.http.get<ForecastResponse>(api);
 
     }
+    
 }
