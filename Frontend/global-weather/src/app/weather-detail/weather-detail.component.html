@@ -1,0 +1,73 @@
+
+<body>
+    
+   
+    <main>
+        <div class = "left-container">
+            <section class="current-weather" >
+                <h2>Current Weather</h2>
+                <div class="current-weather-box">
+                    <div class="current-weather-left">
+                        <p><strong> {{weather.location.name}}</strong></p>
+                        <img [src]="weather.current.condition.icon" alt="Weather Icon">
+                        <p> {{weather.current.temp_c}} °C</p>
+                        <p> {{weather.current.condition.text}}</p>
+                    </div>
+                    <div class="current-weather-right">
+                        <p><strong>Humidity:</strong> %{{weather.current.humidity}}</p>
+                        <p><strong>Feels Like:</strong> {{weather.current.feelslike_c}} °C</p>
+                        <p><strong>Cloud Cover:</strong> %{{weather.current.cloud}}</p>
+                        <p><strong>UV Index:</strong> {{weather.current.uv}}</p>
+                        <p><strong>Wind Speed:</strong> {{weather.current.wind_kph}} km/h</p>
+                         <p><strong>Wind Gust Speed:</strong> {{weather.current.gust_kph}} km/h</p>
+                        <p><strong>Wind Degree:</strong> {{weather.current.wind_degree}}°</p>
+                        <p><strong>Wind Direction:</strong> {{weather.current.wind_dir}} </p>
+                        <p><strong>Pressure:</strong> {{weather.current.pressure_mb}} mb </p>
+                        <p><strong>Visibility:</strong> {{weather.current.vis_km}} km </p>
+                        <p><strong>Precipitation:</strong> {{weather.current.precip_mm}} mm </p>
+                    </div>
+                
+                </div>
+                <p>Last update: {{weather.current.last_updated}} local time </p>
+                
+            </section>
+            
+         
+        </div>
+        <div class="right-container">
+            <section class="today">
+                    <h2>Today Weather</h2>
+                    <br>
+                    
+                    <div class="today-info" >
+                        <h5> {{forecastdays[0].date}}</h5>   
+                        <img [src]="forecastdays[0].day.condition.icon" alt="Weather Icon">
+                        
+                        <h5> {{forecastdays[0].day.condition.text}}</h5>   
+                        <h5> {{ forecastdays[0].day.maxtemp_c }} / {{ forecastdays[0].day.mintemp_c }} °C</h5>
+                        <h5> Total Precipitation: {{ forecastdays[0].day.totalprecip_mm }} mm</h5>
+                        <h5> Chance of Rain: {{ forecastdays[0].day.daily_chance_of_rain }}%</h5>
+                        <h5> Average Visibility: {{ forecastdays[0].day.avgvis_km }} km</h5>
+                        
+                        
+                            
+                    </div>
+                    
+            </section>
+        </div>
+
+       
+        
+        
+
+            
+       
+        
+
+    
+        
+    </main>
+    
+</body>
+
+
