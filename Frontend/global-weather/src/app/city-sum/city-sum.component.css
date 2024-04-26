@@ -1,0 +1,241 @@
+/* styles.css */
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the header */
+header {
+    background-color: #08141b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Basic styling for the navigation */
+nav {
+    background-color: #344b5a;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Styling for main content */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+}
+
+/* Styling for sections */
+section {
+    
+    float:center;
+    margin: 15px;
+
+}
+
+/* Styling for current weather section */
+.current-weather {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+    height: 40%;
+    width: 70%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.current-weather:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.current-weather-box{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+
+}
+.current-weather-left{
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+}
+.current-weather-right{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+
+}
+
+/* Styling for forecast section */
+.forecast {
+    background-color: #fff;
+    padding: 15px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+    width: 80%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+
+    
+    
+    
+}
+.forecast:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.forecast-days{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.forecast-info{
+    width: 100px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-top: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+    font-weight: 500;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+    font-size: 15px;
+}
+
+/* Basic styling for footer */
+footer {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    float:down;
+}
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+body{
+    background-color: rgb(236, 241, 245);
+    background-size:cover;
+    min-height: 200vh;
+}
+
+.air-quality{
+    background-color: #fff;
+    padding: 15px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.air-quality-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+
+}
+.astro {
+    background-color: #fff;
+    padding: 15px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+
+    
+    
+    
+}
+.astro-info{
+    width: 70%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-left: 10px;
+    
+    
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+    font-weight: 500;
+    
+    
+    font-size: 15px;
+}
+.left-container{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.right-container{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.map{
+    width: 500px;
+    height: 300px;
+}
