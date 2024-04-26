@@ -1,0 +1,25 @@
+<body>
+    <main>
+            <section class="forecast" >
+                    
+                    
+                    <div class = "forecast-days">
+                        <div class="forecast-info" *ngFor="let forecastday of forecastdays">
+                            <div class="forecast-left">
+                                <h5> {{ forecastday.date }}</h5>
+                                <img [src]="forecastday.day.condition.icon" alt="Weather Icon">
+                                <p> {{ forecastday.day.maxtemp_c }}/{{ forecastday.day.mintemp_c }}°C</p>
+                                <p> {{forecastday.day.condition.text}}</p>   
+                                
+                            </div>
+                            <div class="forecast-right">
+                                <h5> Total Precipitation: {{ forecastday.day.totalprecip_mm }} mm</h5>
+                                <h5> Chance of Rain: {{ forecastday.day.daily_chance_of_rain }}%</h5>
+                                <h5> Average Visibility: {{ forecastday.day.avgvis_km }} km</h5>
+                                <h5> Max Wind Speed: {{ forecastday.day.maxwind_kph }} km</h5>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+    </main>
+</body>
