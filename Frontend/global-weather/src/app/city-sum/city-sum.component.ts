@@ -19,6 +19,7 @@ export class CitySumComponent implements OnInit{
   forecast!: ForecastResponse;
   forecastdays!: Forecastday[];
   name:string="";
+  adjustedName:string="";
  
   map:string="";
   constructor(private weatherService: WeatherService,private route: ActivatedRoute, private router: Router){}
@@ -28,10 +29,12 @@ export class CitySumComponent implements OnInit{
         (params: Params) => {
           this.name = params['name'];
           var map="https://www.google.com/maps/embed/v1/place?key=AIzaSyA84M_PGqg-D8VH3VA2ZcSjQJNNqnOInxU&q=" ;
-          this.map = map.concat(this.name);
+          
           this.weatherService.getWeather(this.name).
           subscribe(wResponse=>{
             this.weather = wResponse;
+            this.adjustedName = this.weather.location.name.replace(/ /g, '+');
+            this.map = map.concat(this.adjustedName);
           })
         
         this.weatherService.getForecast(this.name).
