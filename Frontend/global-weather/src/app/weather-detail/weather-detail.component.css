@@ -37,7 +37,7 @@
 body{
     background-color: rgb(236, 241, 245);
     background-size:cover;
-    min-height: 100vh;
+    min-height: 200vh;
     border-style: solid;
     border-color: rgba(139, 138, 138, 0.74);
     border-width: 1px;
@@ -109,3 +109,4 @@ main{
 h5{
     padding: 10px;
 }
+

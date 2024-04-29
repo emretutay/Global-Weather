@@ -17,11 +17,11 @@
                         <p><strong>Humidity:</strong> %{{weather.current.humidity}}</p>
                         <p><strong>Feels Like:</strong> {{weather.current.feelslike_c}} °C</p>
                         <p><strong>Cloud Cover:</strong> %{{weather.current.cloud}}</p>
+                        <app-wind-animation [windDegree]="weather.current.wind_degree" [windDirection]="weather.current.wind_dir" [windSpeed]="weather.current.wind_kph"></app-wind-animation>
                         <p><strong>UV Index:</strong> {{weather.current.uv}}</p>
-                        <p><strong>Wind Speed:</strong> {{weather.current.wind_kph}} km/h</p>
+                        
                          <p><strong>Wind Gust Speed:</strong> {{weather.current.gust_kph}} km/h</p>
-                        <p><strong>Wind Degree:</strong> {{weather.current.wind_degree}}°</p>
-                        <p><strong>Wind Direction:</strong> {{weather.current.wind_dir}} </p>
+                        
                         <p><strong>Pressure:</strong> {{weather.current.pressure_mb}} mb </p>
                         <p><strong>Visibility:</strong> {{weather.current.vis_km}} km </p>
                         <p><strong>Precipitation:</strong> {{weather.current.precip_mm}} mm </p>

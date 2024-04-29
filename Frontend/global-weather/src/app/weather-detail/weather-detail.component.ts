@@ -4,11 +4,12 @@ import { WeatherResponse,ForecastResponse,Forecastday } from '../weather/weather
 import { WeatherService } from '../weather/weather.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router ,Params} from '@angular/router';
+import { WindAnimationComponent } from '../shared/wind-animation/wind-animation.component';
 
 @Component({
   selector: 'app-weather-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,WindAnimationComponent],
   templateUrl: './weather-detail.component.html',
   styleUrl: './weather-detail.component.css'
 })
