@@ -1,0 +1,46 @@
+<body>
+    
+   
+    <main>
+        
+            <section class="astro" >
+                <h2>Astro</h2>
+                <div class="astro-box">
+                    <div class="astro-left">
+                        <p><strong>Sunrise:</strong> {{ forecastdays[0].astro.sunrise }}</p>
+                        <p><strong>Sunset:</strong> {{ forecastdays[0].astro.sunset }}</p>
+                        <p><strong>Moonrise:</strong> {{ forecastdays[0].astro.moonrise }}</p>
+                        <p><strong>Moonset:</strong> {{ forecastdays[0].astro.moonset }}</p>
+                    </div>
+                    <div class="astro-right">
+                        <p><strong>Sun Up:</strong> {{ forecastdays[0].astro.is_sun_up }}</p>
+                        <p><strong>Moon Up:</strong> {{ forecastdays[0].astro.is_moon_up }}</p>
+                        <p><strong>Moon Phase:</strong> {{ forecastdays[0].astro.moon_phase }}</p>
+                        <p><strong>Moon Illumination:</strong> {{ forecastdays[0].astro.moon_illumination }}%</p>
+                    </div>
+                
+                </div>
+                <p>Last update: {{weather.current.last_updated}} local time </p>
+                
+            </section>
+            
+         
+       
+        
+
+       
+        
+        
+
+            
+       
+        
+
+    
+        
+    </main>
+    
+</body>
+
+
+
