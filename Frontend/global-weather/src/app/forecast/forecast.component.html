@@ -4,7 +4,7 @@
                     
                     
                     <div class = "forecast-days">
-                        <div class="forecast-info" *ngFor="let forecastday of forecastdays">
+                        <div class="forecast-info" *ngFor="let forecastday of forecastdays" (click) ="onForecastHour(forecastday.date)">
                             <div class="forecast-left">
                                 <h5> {{ forecastday.date }}</h5>
                                 <img [src]="forecastday.day.condition.icon" alt="Weather Icon">
@@ -13,10 +13,10 @@
                                 
                             </div>
                             <div class="forecast-right">
-                                <h5> Total Precipitation: {{ forecastday.day.totalprecip_mm }} mm</h5>
-                                <h5> Chance of Rain: {{ forecastday.day.daily_chance_of_rain }}%</h5>
-                                <h5> Average Visibility: {{ forecastday.day.avgvis_km }} km</h5>
-                                <h5> Max Wind Speed: {{ forecastday.day.maxwind_kph }} km</h5>
+                                <p> <strong>Total Precipitation:</strong> {{ forecastday.day.totalprecip_mm }} mm</p>
+                                <p> <strong>Chance of Rain: </strong>{{ forecastday.day.daily_chance_of_rain }}%</p>
+                                <p> <strong>Average Visibility: </strong>{{ forecastday.day.avgvis_km }} km</p>
+                                <p> <strong>Max Wind Speed: </strong>{{ forecastday.day.maxwind_kph }} km</p>
                             </div>
                         </div>
                     </div>

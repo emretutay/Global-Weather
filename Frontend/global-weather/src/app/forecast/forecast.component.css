@@ -7,7 +7,7 @@ body{
     border-width: 1px;
 }
 main{
-    margin-top: 3%;
+    margin-top: 10px;
 }
 
 .forecast {
@@ -36,7 +36,7 @@ main{
     justify-content: center;
     align-items: center;
     font-size: x-small;
-    font-weight: 500;
+    
     border-style: solid;
     border-radius: 10px;
     border-color: rgba(180, 178, 178, 0.74);
@@ -57,9 +57,13 @@ main{
 
 }
 .forecast-right{
-    font-size: 15px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     margin:auto;
 
+}
+.forecast-info:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }

@@ -35,4 +35,10 @@ export class ForecastComponent implements OnInit{
       );
    
   }
+
+  onForecastHour(date:string){
+
+    this.router.navigate(['city', this.name, 'forecast', this.name,date]);
+  }
 }
+
