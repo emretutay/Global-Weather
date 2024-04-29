@@ -55,8 +55,34 @@ export class CitySumComponent implements OnInit{
     this.router.navigate(['city', this.name, 'forecast', this.name]);
     
   }
-   
+  onAstro(){
+    this.router.navigate(['city', this.name, 'astro', this.name]);
     
+  }
+  onAir(){
+    this.router.navigate(['city', this.name, 'air', this.name]);
+  }
+   
+
+  getAirColor(index: number): string {
+    switch (index) {
+      case 1:
+        return 'green'; // Good air quality
+      case 2:
+        return 'yellowgreen'; // Moderate air quality
+      case 3:
+        return 'orange'; // Unhealthy for sensitive groups
+      case 4:
+        return 'red'; // Unhealthy air quality
+      case 5:
+        return 'purple'; // Very unhealthy air quality
+      case 6:
+        return 'black'; // Hazardous air quality
+      default:
+        return 'black'; // Default color
+    }
+  }
+   
    
     
   }
