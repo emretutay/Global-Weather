@@ -43,11 +43,11 @@
                         <h5> {{forecastdays[0].date}}</h5>   
                         <img [src]="forecastdays[0].day.condition.icon" alt="Weather Icon">
                         
-                        <h5> {{forecastdays[0].day.condition.text}}</h5>   
-                        <h5> {{ forecastdays[0].day.maxtemp_c }} / {{ forecastdays[0].day.mintemp_c }} °C</h5>
-                        <h5> Total Precipitation: {{ forecastdays[0].day.totalprecip_mm }} mm</h5>
-                        <h5> Chance of Rain: {{ forecastdays[0].day.daily_chance_of_rain }}%</h5>
-                        <h5> Average Visibility: {{ forecastdays[0].day.avgvis_km }} km</h5>
+                        <p> {{forecastdays[0].day.condition.text}}</p>   
+                        <p> {{ forecastdays[0].day.maxtemp_c }} / {{ forecastdays[0].day.mintemp_c }} °C</p>
+                        <p><strong> Total Precipitation: </strong>{{ forecastdays[0].day.totalprecip_mm }} mm</p>
+                        <p> <strong> Chance of Rain: </strong>{{ forecastdays[0].day.daily_chance_of_rain }}%</p>
+                        <p><strong> Average Visibility: </strong>{{ forecastdays[0].day.avgvis_km }} km</p>
                         
                         
                             
