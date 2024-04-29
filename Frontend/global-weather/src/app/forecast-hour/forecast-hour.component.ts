@@ -5,10 +5,11 @@ import { Router ,Params} from '@angular/router';
 import { WeatherService } from '../weather/weather.service';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { WindAnimationComponent } from '../shared/wind-animation/wind-animation.component';
 @Component({
   selector: 'app-forecast-hour',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,WindAnimationComponent],
   templateUrl: './forecast-hour.component.html',
   styleUrl: './forecast-hour.component.css',
   animations: [

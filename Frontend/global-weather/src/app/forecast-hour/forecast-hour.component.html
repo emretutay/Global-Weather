@@ -15,9 +15,8 @@
                                 </div>
                                 <div class="forecast-right">
                                     <p><strong> Precipitation: </strong>{{ forecasthour.precip_mm }} mm</p>
-                                    <p> <strong>Wind Speed: </strong>{{ forecasthour.wind_kph }} km</p>
-                                    <p> <strong>Wind Degree: </strong>{{ forecasthour.wind_degree }}° </p>
-                                    <p><strong> Wind Direction: </strong>{{ forecasthour.wind_dir }} </p>
+                                    <app-wind-animation [windDegree]="forecasthour.wind_degree" [windDirection]="forecasthour.wind_dir" [windSpeed]="forecasthour.wind_kph"></app-wind-animation>
+                                    
                                 </div>
                             </div>
                             
