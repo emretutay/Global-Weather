@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { LowerNavbarComponent } from '../lower-navbar/lower-navbar.component';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule,LowerNavbarComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
   providers:[WeatherService]
