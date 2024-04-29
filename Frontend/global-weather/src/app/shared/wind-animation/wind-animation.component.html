@@ -1,0 +1,16 @@
+
+<div class = "wind">
+    <div class="wind-container">
+        
+        <div class="wind-arrow" [style.transform]="'rotate(' + (windDegree - 90)  + 'deg)'">
+        
+        </div>
+    </div>
+    <div class = "wind-indicator">
+        <div class="wind-direction">{{ windDirection }}</div>
+        <div class="wind-degree">{{ windDegree }}°</div>
+        <div class="wind-speed">{{ windSpeed }} km/h</div>
+    </div>
+</div>
+
+
