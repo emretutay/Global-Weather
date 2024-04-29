@@ -1,0 +1,122 @@
+body{
+    background-color: rgb(236, 241, 245);
+    background-size:cover;
+    min-height: 900vh;
+    border-style: solid;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
+}
+main{
+    margin-top: 10px;
+}
+
+.forecast {
+    
+    
+    width: 800px;
+    height: 180%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    
+}
+.forecast-hours{
+    display: flex;
+    flex-direction: column;
+    
+}
+.forecast-info{
+    width: 100%;
+    height: 30%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(180, 178, 178, 0.74);
+    border-width: 1px;
+    
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+.forecast-unexpanded{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   
+    font-weight: 400;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(180, 178, 178, 0.74);
+    border-width: 1px;
+    font-size: 15px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.forecast-expanded{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-top: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    font-weight: 400;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(180, 178, 178, 0.74);
+    border-width: 1px;
+    font-size: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.forecast-left{
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    
+    margin: auto;
+
+}
+.forecast-expanded .forecast-left{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    margin: auto;
+
+}
+.forecast-right{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+
+}
+.forecast-info:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}

@@ -1,0 +1,52 @@
+<body>
+    <main>
+            <section class="forecast" >
+                    
+                    
+                    <div class = "forecast-hours">
+                        <div class="forecast-info" *ngFor="let forecasthour of forecasthours; let i = index"  (click)="toggleExpansion(i)" [@expandCollapse]="isListExpanded(i)?'expanded':'collapsed'">
+                            <div class="forecast-unexpanded">
+                                <div class="forecast-left">
+                                    <h5> {{ forecasthour.time }}</h5>
+                                    <img [src]="forecasthour.condition.icon" alt="Weather Icon">
+                                    <p> {{ forecasthour.temp_c }}°C</p>
+                                    <p> {{forecasthour.condition.text}}</p>   
+                                    
+                                </div>
+                                <div class="forecast-right">
+                                    <p><strong> Precipitation: </strong>{{ forecasthour.precip_mm }} mm</p>
+                                    <p> <strong>Wind Speed: </strong>{{ forecasthour.wind_kph }} km</p>
+                                    <p> <strong>Wind Degree: </strong>{{ forecasthour.wind_degree }}° </p>
+                                    <p><strong> Wind Direction: </strong>{{ forecasthour.wind_dir }} </p>
+                                </div>
+                            </div>
+                            
+                            <div *ngIf="isExpanded[i]" class = "forecast-expanded">
+                                <div class="forecast-left">
+                                    <p><strong> UV: </strong>{{ forecasthour.uv }}</p>
+                                    <p> <strong>Feelslike: </strong>{{ forecasthour.feelslike_c }}°C</p>
+                                    <p> <strong>Windchill: </strong>{{forecasthour.windchill_c}}°C</p>   
+                                    <p> <strong>Heatindex: </strong>{{ forecasthour.heatindex_c }}°C</p>
+                                    <p> <strong>Dewpoint: </strong>{{forecasthour.dewpoint_c}}</p>  
+                                    
+                                    
+                                    
+                                </div>
+                                <div class="forecast-right">
+                                    
+                                    <p> <strong> Visibility:</strong> {{ forecasthour.vis_km }} km</p>
+                                    <p> <strong>Humidity: </strong>{{ forecasthour.humidity}}%</p>
+                                    <p> <strong>Cloud: </strong>{{ forecasthour.cloud }}% </p>
+                                
+                                    <p> <strong>Chance of Rain: </strong> {{ forecasthour.chance_of_rain }}%</p>
+                                    <p> <strong>Chance of Snow: </strong>{{ forecasthour.chance_of_snow }}%</p>
+                                    <p> <strong>Chance of Snow: </strong>{{ forecasthour.snow_cm }} cm</p>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </section>
+    </main>
+</body>
