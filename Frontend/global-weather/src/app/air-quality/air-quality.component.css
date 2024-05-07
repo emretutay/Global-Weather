@@ -1,44 +1,57 @@
-.astro {
+.air {
     background-color: #fff;
-    padding: 15px;
+    
     border-radius: 10px;
     border-style: solid;
     border-color: rgba(139, 138, 138, 0.74);
     border-width: 1px;
-    height: 60%;
-    width: 60%;
+    height: 180%;
+    width: 800px;
    
     
     
 }
 
-.astro-box{
+.air-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+
+}
+.air-row{
+    height: 200px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    margin-top: 10%;
-
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: solid;
+    border-color: rgba(139, 138, 138, 0.74);
+    border-width: 1px;
 }
-.astro-left{
+.air-left{
     padding: 40px;
     font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+    margin-right: 200px ;
+    margin-left: 50px ;
+    
+    
 
 }
-.astro-right{
+.air-right{
     padding: 40px;
     font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+    margin-left: 200px ;
+    margin-right: 50px ;
+    
     
 
 }
 body{
     background-color: rgb(236, 241, 245);
     background-size:cover;
-    min-height: 100vh;
+    min-height: 200vh;
     border-style: solid;
     border-color: rgba(139, 138, 138, 0.74);
     border-width: 1px;
@@ -50,7 +63,7 @@ main{
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin-top: 3%;
+    
     border-style: solid;
     border-radius: 10px;
     border-color: rgba(139, 138, 138, 0.74);

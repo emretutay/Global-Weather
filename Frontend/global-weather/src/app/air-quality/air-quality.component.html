@@ -3,20 +3,74 @@
    
     <main>
         
-            <section class="astro" >
+            <section class="air" >
                 <h2>Air Quality</h2>
-                <div class="astro-box">
-                    <div class="astro-left">
-                        <p><strong>CO:</strong> {{ weather.current.air_quality.co }}</p>
-                        <p><strong>O3:</strong> {{ weather.current.air_quality.o3  }}</p>
-                        <p><strong>SO2:</strong> {{ weather.current.air_quality.so2 }}</p>
-                        <p><strong>NO2:</strong> {{ weather.current.air_quality.no2  }}</p>
+                <div class="air-box">
+                    <div class="air-row">
+                        <div class="air-left">
+                            <p><strong>CO</strong> </p>
+                           
+                        </div>
+                        <div class="air-right">
+                            <p> {{ weather.current.air_quality.co }} μg/m3</p>
+
+                        </div>
                     </div>
-                    <div class="astro-right">
-                        <p><strong>PM2.5:</strong> {{ weather.current.air_quality.pm2_5  }}</p>
-                        <p><strong>PM10:</strong> {{ weather.current.air_quality.pm10 }}</p>
-                        <p><strong>Epa Index:</strong> {{weather.current.air_quality['us-epa-index'] }}</p>
-                        <p><strong>Defra Index:</strong> {{ weather.current.air_quality['gb-defra-index'] }}</p>
+                    <div class="air-row">
+                        <div class="air-left">
+                           <p><strong>O3</strong> </p>
+                        </div>
+                        <div class="air-right">
+                            <p> {{ weather.current.air_quality.o3  }} μg/m3</p>
+                        </div>
+                    </div>
+                    <div class="air-row">
+                        <div class="air-left">
+                           <p><strong>SO2</strong> </p>
+                        </div>
+                        <div class="air-right">
+                            <p> {{ weather.current.air_quality.so2 }} μg/m3</p>
+                        </div>
+                    </div>
+                    <div class="air-row">
+                        <div class="air-left">
+                           <p><strong>NO2</strong> </p>
+                        </div>
+                        <div class="air-right">
+                            <p> {{ weather.current.air_quality.no2  }} μg/m3</p>
+                        </div>
+                    </div>
+                    <div class="air-row">
+                        <div class="air-left">
+                           <p><strong>PM2.5</strong> </p>
+                        </div>
+                        <div class="air-right">
+                            <p> {{ weather.current.air_quality.pm2_5  }} μg/m3</p>
+                        </div>
+                    </div>
+                    <div class="air-row">
+                        <div class="air-left">
+                           <p><strong>PM10</strong> </p>
+                        </div>
+                        <div class="air-right">
+                            <p> {{ weather.current.air_quality.pm10 }} μg/m3</p>
+                        </div>
+                    </div>
+                    <div class="air-row">
+                        <div class="air-left">
+                           <p><strong>Epa Index</strong> </p>
+                        </div>
+                        <div class="air-right">
+                            <p> {{weather.current.air_quality['us-epa-index'] }}</p>
+                        </div>
+                    </div>
+                    <div class="air-row">
+                        <div class="air-left">
+                           <p><strong>Defra Index</strong> </p>
+                        </div>
+                        <div class="air-right">
+                            <p> {{ weather.current.air_quality['gb-defra-index'] }}</p>
+                        </div>
                     </div>
                 
                 </div>

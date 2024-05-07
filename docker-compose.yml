@@ -1,0 +1,19 @@
+
+
+services:
+
+  spring-boot:
+    build:
+      context: /Backend/Global-Weather
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
+  angular:
+    build:
+      context: /Frontend/global-weather
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    depends_on:
+      - spring-boot
