@@ -1,16 +1,24 @@
 
 <div class = "wind">
-    <div class="wind-container">
+    <p> <img src="/assets/icon/wind.svg" alt="image" height="30" width="30"><strong> Wind </strong></p>
+    <div class="wind-info">
+        <div class="wind-container">
         
-        <div class="wind-arrow" [style.transform]="'rotate(' + (windDegree - 90)  + 'deg)'">
+            <div class="wind-arrow" [style.transform]="'rotate(' + (windDegree - 90)  + 'deg)'">
         
         </div>
     </div>
-    <div class = "wind-indicator">
-        <div class="wind-direction">{{ windDirection }}</div>
-        <div class="wind-degree">{{ windDegree }}°</div>
-        <div class="wind-speed">{{ windSpeed }} km/h</div>
+        <div class = "wind-indicator">
+            <div class="wind-direction">{{ windDirection }}</div>
+            <div class="wind-degree">{{ windDegree }}°</div>
+           
+        </div>
     </div>
+  
+     <div class = "wind-indicator">
+            
+            <div class="wind-speed">{{ windSpeed }} km/h</div>
+        </div>
 </div>
 
 

@@ -39,13 +39,7 @@ nav ul li a {
 /* Styling for main content */
 main {
     
-    
-    
-    
-    
-    border-style: solid;
-    border-color: rgba(139, 138, 138, 0.74);
-    border-width: 1px;
+
 }
 
 /* Styling for sections */
@@ -77,8 +71,9 @@ section {
 .current-weather-box{
     display: flex;
     flex-direction: row;
-    margin: auto;
-   padding: 40px;
+    margin-top: 30px;
+    padding: 40px;
+   
 }
 .current-weather-left{
     font-size: 20px;
@@ -126,16 +121,18 @@ section {
     margin-top: 20px;
 }
 .forecast-info{
-    width: 24%;
-    height: 200px;
+    width: 20%;
+    height: 150px;
     background-color: #ffffff;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
     
     padding: 18px;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: x-small;
+    
     font-weight: 500;
     border-style: solid;
     border-radius: 10px;
@@ -165,6 +162,7 @@ body{
     background-color: rgb(236, 241, 245);
     background-size:cover;
     min-height: 200vh;
+   
 }
 
 .air-quality{
@@ -179,7 +177,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
+    
     align-items: center;
 
 }
@@ -191,8 +189,9 @@ body{
 .air-quality-box{
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 25%;
     font-size: 20px;
+    line-height: 50px;
 
 }
 .astro {
@@ -224,7 +223,8 @@ body{
     background-color: #ffffff;
     border-radius: 10px;
     margin-left: 10px;
-    
+    display: flex;
+    flex-direction: row;
     
     justify-content: center;
     align-items: center;
@@ -233,6 +233,11 @@ body{
     
     margin: auto;
     font-size: 20px;
+}
+.astro-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 }
 .container{
     width: 1600px;
@@ -243,17 +248,13 @@ body{
     transform: translate(-50%,-0%);
     display: flex;
     flex-direction: row;
-    border-style: solid;
-    border-color: rgba(139, 138, 138, 0.74);
-    border-width: 1px;
+  
 }
 .left-container{
     display: flex;
     flex-direction: column;
     width: 55%;
-    border-style: solid;
-    border-color: rgba(139, 138, 138, 0.74);
-    border-width: 1px;
+   
     
     
 }
@@ -261,12 +262,10 @@ body{
     width: 45%;
     display: flex;
     flex-direction: column;
-    border-style: solid;
-    border-color: rgba(139, 138, 138, 0.74);
-    border-width: 1px;
+   
     
 }
 .map{
-    width: 450px;
+    width: 600px;
     height: 300px;
 }

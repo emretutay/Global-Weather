@@ -6,10 +6,11 @@ import { WeatherService } from '../weather/weather.service';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { WindAnimationComponent } from '../shared/wind-animation/wind-animation.component';
+import { UvAnimationComponent } from '../shared/uv-animation/uv-animation.component';
 @Component({
   selector: 'app-forecast-hour',
   standalone: true,
-  imports: [CommonModule,WindAnimationComponent],
+  imports: [CommonModule,WindAnimationComponent,UvAnimationComponent],
   templateUrl: './forecast-hour.component.html',
   styleUrl: './forecast-hour.component.css',
   animations: [
@@ -19,7 +20,7 @@ import { WindAnimationComponent } from '../shared/wind-animation/wind-animation.
         overflow: 'hidden'
       })),
       state('expanded', style({
-        height: '650px',
+        height: '750px',
         overflow: 'hidden'
       })),
       transition('collapsed <=> expanded', [

@@ -14,7 +14,7 @@
                                     
                                 </div>
                                 <div class="forecast-right">
-                                    <p><strong> Precipitation: </strong>{{ forecasthour.precip_mm }} mm</p>
+                                    <p><img src="/assets/icon/precip.svg" alt="image" height="35" width="35"><strong> Precipitation: </strong>{{ forecasthour.precip_mm }} mm</p>
                                     <app-wind-animation [windDegree]="forecasthour.wind_degree" [windDirection]="forecasthour.wind_dir" [windSpeed]="forecasthour.wind_kph"></app-wind-animation>
                                     
                                 </div>
@@ -22,24 +22,25 @@
                             
                             <div *ngIf="isExpanded[i]" class = "forecast-expanded">
                                 <div class="forecast-left">
-                                    <p><strong> UV: </strong>{{ forecasthour.uv }}</p>
+                                    <app-uv-animation [uvIndex]="forecasthour.uv"></app-uv-animation>
+                                    
                                     <p> <strong>Feelslike: </strong>{{ forecasthour.feelslike_c }}°C</p>
                                     <p> <strong>Windchill: </strong>{{forecasthour.windchill_c}}°C</p>   
                                     <p> <strong>Heatindex: </strong>{{ forecasthour.heatindex_c }}°C</p>
-                                    <p> <strong>Dewpoint: </strong>{{forecasthour.dewpoint_c}}</p>  
+                                    <p> <strong>Dewpoint: </strong>{{forecasthour.dewpoint_c}}°C</p>  
                                     
                                     
                                     
                                 </div>
                                 <div class="forecast-right">
                                     
-                                    <p> <strong> Visibility:</strong> {{ forecasthour.vis_km }} km</p>
-                                    <p> <strong>Humidity: </strong>{{ forecasthour.humidity}}%</p>
-                                    <p> <strong>Cloud: </strong>{{ forecasthour.cloud }}% </p>
+                                    <p> <img src="/assets/icon/visibility.svg" alt="image" height="35" width="35"><strong> Visibility:</strong> {{ forecasthour.vis_km }} km</p>
+                                    <p> <img src="/assets/icon/humidity.svg" alt="image" height="35" width="35"><strong> Humidity: </strong>{{ forecasthour.humidity}}%</p>
+                                    <p> <img src="/assets/icon/cloud.svg" alt="image" height="35" width="35"><strong>Cloud: </strong>{{ forecasthour.cloud }}% </p>
                                 
                                     <p> <strong>Chance of Rain: </strong> {{ forecasthour.chance_of_rain }}%</p>
                                     <p> <strong>Chance of Snow: </strong>{{ forecasthour.chance_of_snow }}%</p>
-                                    <p> <strong>Chance of Snow: </strong>{{ forecasthour.snow_cm }} cm</p>
+                                    <p> <strong>Amount of Snow: </strong>{{ forecasthour.snow_cm }} cm</p>
                                     
                                 </div>
 

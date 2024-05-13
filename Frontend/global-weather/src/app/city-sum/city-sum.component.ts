@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Router ,Params} from '@angular/router';
 import { SafePipe } from '../safe.pipe';
 
+
 @Component({
   selector: 'app-city-sum',
   standalone: true,

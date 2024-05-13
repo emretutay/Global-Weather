@@ -13,10 +13,10 @@
                                 
                             </div>
                             <div class="forecast-right">
-                                <p> <strong>Total Precipitation:</strong> {{ forecastday.day.totalprecip_mm }} mm</p>
+                                <p> <img src="/assets/icon/precip.svg" alt="image" height="35" width="35"><strong>Total Precipitation:</strong> {{ forecastday.day.totalprecip_mm }} mm</p>
                                 <p> <strong>Chance of Rain: </strong>{{ forecastday.day.daily_chance_of_rain }}%</p>
-                                <p> <strong>Average Visibility: </strong>{{ forecastday.day.avgvis_km }} km</p>
-                                <p> <strong>Max Wind Speed: </strong>{{ forecastday.day.maxwind_kph }} km</p>
+                                <p> <img src="/assets/icon/visibility.svg" alt="image" height="35" width="35"><strong>Average Visibility: </strong>{{ forecastday.day.avgvis_km }} km</p>
+                                <p> <img src="/assets/icon/wind.svg" alt="image" height="35" width="35"><strong> Max Wind Speed: </strong>{{ forecastday.day.maxwind_kph }} km</p>
                             </div>
                         </div>
                     </div>

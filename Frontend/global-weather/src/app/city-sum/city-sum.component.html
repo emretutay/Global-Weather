@@ -1,6 +1,4 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,10 +21,15 @@
                             <p> {{weather.current.condition.text}}</p>
                         </div>
                         <div class="current-weather-right">
-                            <p><strong>Humidity:</strong> %{{weather.current.humidity}}</p>
-                            <p><strong>Feels Like:</strong> {{weather.current.feelslike_c}} °C</p>
-                            <p><strong>Cloud Cover:</strong> %{{weather.current.cloud}}</p>
-                            <p><strong>Wind Speed:</strong> {{weather.current.wind_kph}} km/h</p>
+
+                            <p><img src="/assets/icon/humidity.svg" alt="image"><strong> Humidity</strong> %{{weather.current.humidity}}</p>
+                            <br>
+                            <p><img src="/assets/icon/temp.svg" alt="image"><strong>Feels Like:</strong> {{weather.current.feelslike_c}} °C</p>
+                            <br>
+                            <p><img src="/assets/icon/cloud.svg" alt="image"><strong> Cloud Cover</strong> %{{weather.current.cloud}}</p>
+                            <br>
+                            <p><img src="/assets/icon/wind.svg" alt="image"><strong> Wind Speed</strong> {{weather.current.wind_kph}} km/h</p>
+                            <br>
                         </div>
                     
                     </div>
@@ -55,11 +58,25 @@
                         <br>
                         
                         <div class="astro-info" >
+                            <img src="/assets/icon/sun.svg" height ="50" width="50" alt="image">
+                             <div class="astro-text">
+                                <p> <strong>Sunrise:</strong> {{ forecastdays[0].astro.sunrise }} </p>
+                                <p><strong> Sunset: </strong>{{ forecastdays[0].astro.sunset }}</p>
+                            
+                             </div>   
+                           
+                            
+                            
                                 
-                            <p> <strong>Sunrise:</strong> {{ forecastdays[0].astro.sunrise }}</p>
-                            <p><strong> Sunset: </strong>{{ forecastdays[0].astro.sunset }}</p>
-                            <p><strong> Moonrise: </strong>{{ forecastdays[0].astro.moonrise }}</p>
-                            <p><strong> Moonset: </strong>{{ forecastdays[0].astro.moonset }}</p>
+                        </div>
+                        <div class="astro-info" >
+                            <img src="/assets/icon/moon.svg"  alt="image">
+                            <div class="astro-text">
+                                <p><strong> Moonrise: </strong>{{ forecastdays[0].astro.moonrise }}</p>
+                                <p><strong> Moonset: </strong>{{ forecastdays[0].astro.moonset }}</p>
+                            </div>   
+                        
+                            
                             
                             
                                 
@@ -92,7 +109,7 @@
                 </section>
                 <section class="map">
                     <iframe
-                    width="450"
+                    width="600"
                     height="300"
                     style="border:0"
                     loading="lazy"

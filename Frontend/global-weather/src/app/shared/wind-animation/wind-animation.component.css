@@ -1,7 +1,7 @@
 .wind-container {
     width: 70px;
     height: 70px;
-    border: 2px solid #ccc;
+    border: 2px solid #858585;
     border-radius: 50%;
     position: relative;
   }
@@ -22,7 +22,7 @@
     
     left: 30%;
     transform: translateX(-30%);
-    font-weight: bold;
+    
   }
   
   .wind-degree {
@@ -30,14 +30,15 @@
     top:5px;
     left: 20%;
     transform: translateX(-20%);
-    font-weight: bold;
+   
   }
   .wind{
-    width: 150px;
+    width: 300px;
     height: 150px;
     display: flex;
     flex-direction: row;
-    border: 2px solid #ccc;
+    
+    justify-content: space-around;
     margin: auto;
 
   }
@@ -46,7 +47,6 @@
     top:25px;
     left: 20%;
     transform: translateX(-20%);
-    font-weight: bold;
   }
   .wind-indicator{
     display: flex;

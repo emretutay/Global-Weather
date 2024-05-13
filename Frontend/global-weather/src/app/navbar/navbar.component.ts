@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ViewEncapsulation } from '@angular/core';
 import { WeatherResponse,ForecastResponse,Forecastday } from '../weather/weather.model';
 import { WeatherService } from '../weather/weather.service';
 import { FormsModule } from '@angular/forms';
@@ -12,7 +12,8 @@ import { LowerNavbarComponent } from '../lower-navbar/lower-navbar.component';
   imports: [FormsModule,CommonModule,LowerNavbarComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
-  providers:[WeatherService]
+  providers:[WeatherService],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class NavbarComponent {
   searchText!: string;

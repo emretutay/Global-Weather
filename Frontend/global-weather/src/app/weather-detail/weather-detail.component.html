@@ -14,17 +14,19 @@
                         <p> {{weather.current.condition.text}}</p>
                     </div>
                     <div class="current-weather-right">
-                        <p><strong>Humidity:</strong> %{{weather.current.humidity}}</p>
-                        <p><strong>Feels Like:</strong> {{weather.current.feelslike_c}} °C</p>
-                        <p><strong>Cloud Cover:</strong> %{{weather.current.cloud}}</p>
+                        <p><img src="/assets/icon/humidity.svg" alt="image"><strong> Humidity</strong> %{{weather.current.humidity}}</p>
+                        <p><img src="/assets/icon/temp.svg" alt="image"><strong>Feels Like:</strong> {{weather.current.feelslike_c}} °C</p>
+                        <p><img src="/assets/icon/cloud.svg" alt="image"><strong> Cloud Cover</strong> %{{weather.current.cloud}}</p>
                         <app-wind-animation [windDegree]="weather.current.wind_degree" [windDirection]="weather.current.wind_dir" [windSpeed]="weather.current.wind_kph"></app-wind-animation>
-                        <p><strong>UV Index:</strong> {{weather.current.uv}}</p>
                         
-                         <p><strong>Wind Gust Speed:</strong> {{weather.current.gust_kph}} km/h</p>
                         
-                        <p><strong>Pressure:</strong> {{weather.current.pressure_mb}} mb </p>
-                        <p><strong>Visibility:</strong> {{weather.current.vis_km}} km </p>
-                        <p><strong>Precipitation:</strong> {{weather.current.precip_mm}} mm </p>
+                        <app-uv-animation [uvIndex]="weather.current.uv"></app-uv-animation>
+                        
+                        <p><strong>Wind Gust Speed:</strong> {{weather.current.gust_kph}} km/h</p>
+                        
+                        <p><img src="/assets/icon/pressure.svg" alt="image"><strong> Pressure:</strong> {{weather.current.pressure_mb}} mb </p>
+                        <p><img src="/assets/icon/visibility.svg" alt="image" height="35" width="35"><strong> Visibility:</strong> {{weather.current.vis_km}} km </p>
+                        <p><img src="/assets/icon/precip.svg" alt="image"><strong>Precipitation:</strong> {{weather.current.precip_mm}} mm </p>
                     </div>
                 
                 </div>

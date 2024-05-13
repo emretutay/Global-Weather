@@ -5,11 +5,12 @@ import { WeatherService } from '../weather/weather.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router ,Params} from '@angular/router';
 import { WindAnimationComponent } from '../shared/wind-animation/wind-animation.component';
+import { UvAnimationComponent } from '../shared/uv-animation/uv-animation.component';
 
 @Component({
   selector: 'app-weather-detail',
   standalone: true,
-  imports: [CommonModule,WindAnimationComponent],
+  imports: [CommonModule,WindAnimationComponent,UvAnimationComponent],
   templateUrl: './weather-detail.component.html',
   styleUrl: './weather-detail.component.css'
 })

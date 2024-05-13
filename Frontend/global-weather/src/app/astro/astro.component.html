@@ -13,9 +13,13 @@
                         <p><strong>Moonset:</strong> {{ forecastdays[0].astro.moonset }}</p>
                     </div>
                     <div class="astro-right">
-                        <p><strong>Sun Up:</strong> {{ forecastdays[0].astro.is_sun_up }}</p>
-                        <p><strong>Moon Up:</strong> {{ forecastdays[0].astro.is_moon_up }}</p>
-                        <p><strong>Moon Phase:</strong> {{ forecastdays[0].astro.moon_phase }}</p>
+                        <p><strong>Sun Up:</strong> {{ forecastdays[0].astro.is_sun_up | yesNo }}</p>
+                        <p><strong>Moon Up:</strong> {{ forecastdays[0].astro.is_moon_up | yesNo }}</p>
+                        <div class="moon">
+                            <p><strong>Moon Phase:</strong> {{ forecastdays[0].astro.moon_phase }}  </p>
+                            <img src="/assets/icon/moon/{{iconClass}}.svg" alt="image" height="60" width="60">
+                        </div>
+                        
                         <p><strong>Moon Illumination:</strong> {{ forecastdays[0].astro.moon_illumination }}%</p>
                     </div>
                 

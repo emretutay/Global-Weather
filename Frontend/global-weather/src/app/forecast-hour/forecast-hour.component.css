@@ -2,13 +2,9 @@ body{
     background-color: rgb(236, 241, 245);
     background-size:cover;
     min-height: 900vh;
-    border-style: solid;
-    border-color: rgba(139, 138, 138, 0.74);
-    border-width: 1px;
+    
 }
-main{
-    margin-top: 10px;
-}
+
 
 .forecast {
     
@@ -60,10 +56,7 @@ main{
     align-items: center;
    
     font-weight: 400;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: rgba(180, 178, 178, 0.74);
-    border-width: 1px;
+  
     font-size: 15px;
     margin-top: 10px;
     display: flex;
@@ -82,10 +75,7 @@ main{
     align-items: center;
     font-size: small;
     font-weight: 400;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: rgba(180, 178, 178, 0.74);
-    border-width: 1px;
+  
     font-size: 20px;
     margin-top: 10px;
     display: flex;
